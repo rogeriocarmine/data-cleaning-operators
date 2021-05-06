@@ -24,7 +24,7 @@ No = Array("NAO", "NO", "N")
 
 ' Change the Sheet and Range according to the case.
 
-Set RangeToFix = Sheets("outbreak").Range("G2:G201")
+Set RangeToFix = Sheets("outbreak_dataset").Range("G2:G201")
 
 For Each Cell In RangeToFix
         If IsInArray(UCase(Cell.Value), Yes) Then

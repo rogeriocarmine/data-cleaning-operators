@@ -21,16 +21,16 @@ Dim No As Variant
 
 ' Change the Sheet and Range according to the case.
 
-Set RangeToFix = Sheets("outbreak").Range("B2:B201")
+Set RangeToFix = Sheets("outbreak_dataset").Range("B2:B201")
 
 male_synonym = Array("M", "Masculino", "Masc", "Homem", "Man", "Male", "M.", "Masc.")
 female_synonym = Array("F", "Feminino", "Fem", "Mulher", "Woman", "Female", "Fem.", "Wom.", "Femenino")
 
 For Each Cell In RangeToFix
-        If IsInArray(UCase(Cell.Value), Yes) Then
+        If IsInArray(Cell.Value, male_synonym) Then
             Cell.Value = "M"
         Else
-            If IsInArray(UCase(Cell.Value), No) Then
+            If IsInArray(Cell.Value, female_synonym) Then
                Cell.Value = "F"
             End If
         End If
