@@ -19,7 +19,7 @@ Dim Result As Boolean
 Dim Yes As Variant
 Dim No As Variant
 
-Yes = Array("SIM", "YES", "Y", "X", "SI")
+Yes = Array("SIM", "YES", "Y", "X", "SI","OK")
 No = Array("NAO", "NO", "N")
 
 ' Change the Sheet and Range according to the case.
